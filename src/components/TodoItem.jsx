@@ -2,7 +2,7 @@ import React from "react";
 
 function TodoItem({ task, onRemove }) {
   const removeItem = () => {
-    onRemove(task); // Call the onRemove callback with the task to remove
+    onRemove(task);
   };
 
   return (
