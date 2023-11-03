@@ -1,4 +1,4 @@
-// TaskInput.js
+// TaskInput.jsx
 import React from "react";
 
 function TaskInput({ task, onTaskChange, onAddTask }) {

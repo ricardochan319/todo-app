@@ -1,12 +1,13 @@
-// TodoList.js
+// TodoList.jsx
 import React from "react";
+import TodoItem from "./TodoItem";
 
 function TodoList({ tasks }) {
   return (
     <div>
       <ul>
         {tasks.map((item, index) => (
-          <li key={index}>{item}</li>
+          <TodoItem key={index} task={item} />
         ))}
       </ul>
     </div>
