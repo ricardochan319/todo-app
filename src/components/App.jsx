@@ -19,6 +19,11 @@ function App() {
     }
   };
 
+  // Function to handle removing a task
+  const removeTask = (taskToRemove) => {
+    setTasks(tasks.filter((task) => task !== taskToRemove));
+  };
+
   return (
     <div className="container">
       <div className="heading">
@@ -29,7 +34,7 @@ function App() {
         onTaskChange={handleTaskChange}
         onAddTask={addTask}
       />
-      <TodoList tasks={tasks} />
+      <TodoList tasks={tasks} onRemove={removeTask} />
     </div>
   );
 }

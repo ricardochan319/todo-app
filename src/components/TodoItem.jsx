@@ -1,21 +1,12 @@
-// TodoItem.jsx
-import React, { useState } from "react";
+import React from "react";
 
-function TodoItem({ task }) {
-  const [completed, setCompleted] = useState(false);
-
-  const toggleCompleted = () => {
-    setCompleted(!completed);
+function TodoItem({ task, onRemove }) {
+  const removeItem = () => {
+    onRemove(task); // Call the onRemove callback with the task to remove
   };
 
   return (
-    <li
-      style={{
-        textDecoration: completed ? "line-through" : "none",
-        cursor: "pointer"
-      }}
-      onClick={toggleCompleted}
-    >
+    <li onClick={removeItem} style={{ cursor: "pointer" }}>
       {task}
     </li>
   );
